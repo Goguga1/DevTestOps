@@ -1,0 +1,5 @@
+cd C:\Users\ASUS\Desktop\Projects\Кристиша\Программа для учёта пациентов\production
+
+C:\Users\ASUS\AppData\Local\Programs\Python\Python39\python.exe -m nuitka --onefile --windows-icon-from-ico=img\icon.ico --follow-imports --standalone main.pyw
+
+C:\Users\ASUS\AppData\Local\Programs\Python\Python39\python.exe -m nuitka --standalone --onefile --include-module=PyQt5 --include-module=fitz --follow-imports --enable-plugin=pyqt5 --output-filename=Crystal --quiet --windows-console-mode=disable --windows-icon-from-ico=img/icon.ico main.pyw

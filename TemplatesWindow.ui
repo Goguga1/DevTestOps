@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TemplatesWindow</class>
+ <widget class="QDialog" name="TemplatesWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QFrame" name="background_frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame{
+	background: white;
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+QScrollBar:vertical {
+background: rgba(0,0,0,10);
+width: 8px;
+margin: 1px;
+border-radius: 3px;
+}
+
+QScrollBar::handle:vertical {
+background-color: #777;
+min-height: 20px;
+border-radius: 2px;
+margin: 1px;
+}
+
+QScrollBar::handle:vertical:hover {
+background-color: #555;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+background: none;
+}
+
+
+QScrollBar:horizontal {
+	border-radius: 4px;
+	background: rgba(0,0,0,10);
+    height: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #777;
+    min-width: 20px;
+    border-radius: 2px;
+    margin: 2px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #555;
+}
+
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    height: 0px;
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="ok_button">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>90</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Comfortaa</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: black;
+background: none;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+QPushButton:hover {
+border-color: #222;
+color: #222
+}</string>
+    </property>
+    <property name="text">
+     <string>Ок</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancel_button">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>360</y>
+      <width>90</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Comfortaa</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: black;
+background: none;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+QPushButton:hover {
+border-color: #222;
+color: #222
+}</string>
+    </property>
+    <property name="text">
+     <string>Отмена</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="background">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>600</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>img/background_templates.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scroll_area_templates">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>581</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QScrollArea {
+background: rgba(255,255,255,0);
+border-radius: 15px;
+}
+
+QScrollBar:vertical {
+background: rgba(0,0,0,10);
+width: 8px;
+margin: 1px;
+border-radius: 3px;
+}
+
+QScrollBar::handle:vertical {
+background-color: #777;
+min-height: 20px;
+border-radius: 2px;
+margin: 1px;
+}
+
+QScrollBar::handle:vertical:hover {
+background-color: #555;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+background: none;
+}
+
+
+QScrollBar:horizontal {
+	border-radius: 4px;
+	background: rgba(0,0,0,10);
+    height: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #777;
+    min-width: 20px;
+    border-radius: 2px;
+    margin: 2px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #555;
+}
+
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    height: 0px;
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="templates_widget_contents">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>579</width>
+       <height>339</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+background: rgba(255,255,255,0);
+border-radius: 15px;
+}
+
+QScrollBar:vertical {
+background: rgba(0,0,0,10);
+width: 8px;
+margin: 1px;
+border-radius: 3px;
+}
+
+QScrollBar::handle:vertical {
+background-color: #777;
+min-height: 20px;
+border-radius: 2px;
+margin: 1px;
+}
+
+QScrollBar::handle:vertical:hover {
+background-color: #555;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+background: none;
+}
+
+
+QScrollBar:horizontal {
+	border-radius: 4px;
+	background: rgba(0,0,0,10);
+    height: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #777;
+    min-width: 20px;
+    border-radius: 2px;
+    margin: 2px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #555;
+}
+
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    height: 0px;
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="create_button">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>360</y>
+      <width>90</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Comfortaa</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: black;
+background: none;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+QPushButton:hover {
+border-color: #222;
+color: #222
+}</string>
+    </property>
+    <property name="text">
+     <string>Создать</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_button">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>360</y>
+      <width>90</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Comfortaa</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: black;
+background: none;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+QPushButton:hover {
+border-color: #222;
+color: #222
+}</string>
+    </property>
+    <property name="text">
+     <string>Удалить</string>
+    </property>
+   </widget>
+   <zorder>background</zorder>
+   <zorder>cancel_button</zorder>
+   <zorder>ok_button</zorder>
+   <zorder>scroll_area_templates</zorder>
+   <zorder>create_button</zorder>
+   <zorder>delete_button</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

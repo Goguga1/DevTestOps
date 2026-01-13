@@ -1,0 +1,67 @@
+CREATE TABLE Examinations (
+    Id                        INTEGER PRIMARY KEY
+                                      UNIQUE
+                                      NOT NULL,
+    Person_id                 INTEGER REFERENCES People (Id) ON DELETE CASCADE
+                                      NOT NULL,
+    Eyesight_without_od       DOUBLE  NOT NULL,
+    Eyesight_without_os       DOUBLE  NOT NULL,
+    Eyesight_with_od          DOUBLE  NOT NULL,
+    Eyesight_with_od_sph      DOUBLE  NOT NULL,
+    Eyesight_with_od_cyl      DOUBLE  NOT NULL,
+    Eyesight_with_od_ax       INTEGER NOT NULL,
+    Eyesight_with_os          DOUBLE  NOT NULL,
+    Eyesight_with_os_sph      DOUBLE  NOT NULL,
+    Eyesight_with_os_cyl      DOUBLE  NOT NULL,
+    Eyesight_with_os_ax       INTEGER NOT NULL,
+    Schiascopy_od_type_upper  TEXT    NOT NULL,
+    Schiascopy_od_type_lower  TEXT    NOT NULL,
+    Schiascopy_od_value_upper DOUBLE  NOT NULL,
+    Schiascopy_od_value_lower DOUBLE  NOT NULL,
+    Schiascopy_os_type_upper  TEXT    NOT NULL,
+    Schiascopy_os_type_lower  TEXT    NOT NULL,
+    Schiascopy_os_value_upper DOUBLE  NOT NULL,
+    Schiascopy_os_value_lower DOUBLE  NOT NULL,
+    Glasses_od_sph            DOUBLE  NOT NULL,
+    Glasses_od_cyl            DOUBLE  NOT NULL,
+    Glasses_od_ax             INTEGER NOT NULL,
+    Glasses_os_sph            DOUBLE  NOT NULL,
+    Glasses_os_cyl            DOUBLE  NOT NULL,
+    Glasses_os_ax             INTEGER NOT NULL,
+    Glasses_dpp               INTEGER NOT NULL,
+    Diagnosis_first_part_od   TEXT,
+    Diagnosis_second_part_od  TEXT,
+    Diagnosis_third_part_od   TEXT,
+    Diagnosis_first_part_os   TEXT,
+    Diagnosis_second_part_os  TEXT,
+    Diagnosis_third_part_os   TEXT,
+    Diagnosis_subscription    TEXT,
+    Visit_date                TEXT    NOT NULL
+);
+
+CREATE TABLE People (
+    Id        INTEGER PRIMARY KEY
+                      NOT NULL
+                      UNIQUE,
+    Full_name TEXT    NOT NULL,
+    Birthdate TEXT    NOT NULL
+);
+
+
+CREATE TABLE Settings (
+    On_top                 BOOLEAN NOT NULL,
+    Remember_last_position BOOLEAN NOT NULL,
+    Run_with_system        BOOLEAN NOT NULL,
+    Use_password           BOOLEAN NOT NULL,
+    Last_position          TEXT,
+    Password_hash          TEXT,
+    Ack_save_examination   BOOLEAN,
+    Ack_erase_examination  BOOLEAN,
+    Ack_save_change_data   BOOLEAN,
+    Ack_delete_change_data BOOLEAN,
+    Ack_save_person        BOOLEAN,
+    Ack_delete_person      BOOLEAN
+);
+
+
+$argon2id$v=19$m=65536,t=3,p=4$fSM3nFGvhkVJOYv++85WAw$G0lenRrNWQaqFQzGpgr3AhRBtmq9PCJ3BeysLerREA0
